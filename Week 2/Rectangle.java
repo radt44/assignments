@@ -1,7 +1,10 @@
+//Name: Garrett Radtke
+//Date: 10/7/25
+
 public class Rectangle {
     private double x1, y1, x2, y2, x3, y3, x4, y4;
     public Rectangle(double x1, double y1, double x2, double y2, 
-                     double x3, double y3, double x4, double y4 ) {
+                     double x3, double y3, double x4, double y4 ) { //forms a rectangle with the given coordinates and informs user about it
         setValues(x1, y1, x2, y2, x3, y3, x4, y4);
         System.out.println("The length is: " + Length());
         System.out.println("The width is: " + Width());
@@ -10,7 +13,7 @@ public class Rectangle {
     }
 
     public void setValues(double x1, double y1, double x2, double y2, 
-                          double x3, double y3, double x4, double y4 ) {
+                          double x3, double y3, double x4, double y4 ) { //updates the coordinates of the rectangle
         if(!isRectangle(x1, y1, x2, y2, x3, y3, x4, y4)){
             throw new IllegalArgumentException("Coordinates must form a valid rectangle");
         } 
@@ -27,11 +30,11 @@ public class Rectangle {
         }
     }
 
-    public double Length() {
+    public double Length() { //checks distance between topmost points
         return Distance(this.x4, this.y4, this.x1, this.y1);
     }
 
-    public double Width() {
+    public double Width() { //checks distance between leftmost points
         return Distance(this.x4, this.y4, this.x3, this.y3);
     }
 
@@ -47,7 +50,7 @@ public class Rectangle {
     }
 
     private boolean isRectangle(double x1, double y1, double x2, double y2, 
-                          double x3, double y3, double x4, double y4 ) {
+                          double x3, double y3, double x4, double y4 ) { // checks if the side lengths/diagonals are the same
         if (Distance(x1, y1, x2, y2) == Distance(x4, y4, x3, y3) && Distance(x4, y4, x1, y1) == Distance(x3, y3, x2, y2)) {
             if(Distance(x1, y1, x3, y3) == Distance(x4, y4, x2, y2)) {
                 return true;
@@ -59,11 +62,11 @@ public class Rectangle {
         }
     }
 
-    private boolean isSquare() {
+    public boolean isSquare() {
         return Length() == Width();
     }
 
-    private double Distance(double x1, double y1, double x2, double y2) {
+    private double Distance(double x1, double y1, double x2, double y2) { // calculate distance between two points
         double run = x2 - x1;
         double rise = y2 - y1;
         return Math.sqrt(Math.pow(run, 2) + Math.pow(rise, 2));

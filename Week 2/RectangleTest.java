@@ -1,3 +1,6 @@
+//Name: Garrett Radtke
+//Date: 10/7/25
+
 import java.util.Scanner;
 
 public class RectangleTest {
