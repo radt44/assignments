@@ -1,10 +1,9 @@
+//Name: Garrett Radtke
+//Date: 11/18/2025
+
 import java.util.LinkedList;
 
 public class phonebookManager {
-    // first name, last name, street address, city, zip code, phone number, next
-    // add entry to beginning middle or end
-    // modify entry, delete entry, search by index number, or field.
-    // print list
     LinkedList<listNode> phonebook;
 
     // constructor
@@ -95,6 +94,7 @@ public class phonebookManager {
         }
     }
 
+    //prints the phonebook
     public void printPhonebook() {
         for (listNode entry : phonebook) {
             printEntry(entry);
@@ -102,6 +102,7 @@ public class phonebookManager {
         System.out.println("");
     }
 
+    //method for printing an entry
     private void printEntry(listNode entry) {
         System.out.println("Name: " + entry.firstName + " " + entry.lastName);
         System.out.println(

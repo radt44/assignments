@@ -1,3 +1,6 @@
+//Name: Garrett Radtke
+//Date: 11/18/2025
+
 public class listNode {
     String firstName;
     String lastName;

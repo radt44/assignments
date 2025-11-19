@@ -1,3 +1,6 @@
+//Name: Garrett Radtke
+//Date: 11/18/2025
+
 public class testClass {
     public static void main(String[] args) {
         // list of random entries to add to phonebook
